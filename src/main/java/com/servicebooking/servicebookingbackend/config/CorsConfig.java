@@ -15,11 +15,13 @@ public class CorsConfig {
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
+
         config.setAllowedOrigins(List.of(
                 "http://localhost:3000",
                 "https://service-booking-frontend-cyan.vercel.app",
-                "https://*.vercel.app"
+                "https://service-booking-frontend-git-main-avichoundkar1-4611s-projects.vercel.app"
         ));
+
         config.setAllowedHeaders(List.of("*"));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
 
