@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
-
 import java.util.List;
 
 @Configuration
@@ -14,12 +13,12 @@ public class CorsConfig {
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
+
         config.setAllowCredentials(true);
 
-        config.setAllowedOrigins(List.of(
+        config.setAllowedOriginPatterns(List.of(
                 "http://localhost:3000",
-                "https://service-booking-frontend-cyan.vercel.app",
-                "https://service-booking-frontend-git-main-avichoundkar1-4611s-projects.vercel.app"
+                "https://*.vercel.app"
         ));
 
         config.setAllowedHeaders(List.of("*"));
