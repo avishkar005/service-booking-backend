@@ -1,7 +1,7 @@
 spring:
   data:
     mongodb:
-      uri:mongodb+srv://serviceuser:serviceuser@servicebooking.tkbghrb.mongodb.net/?appName=servicebooking
+      uri:${MONGODB_URI}
     database: servicebooking
 
   security:
